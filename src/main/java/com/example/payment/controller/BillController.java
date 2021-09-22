@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.payment.entity.Bill;
-import com.example.payment.entity.User;
 import com.example.payment.dao.Billdao;
-import com.example.payment.dao.UserDao;
 
 @RestController
 public class BillController {

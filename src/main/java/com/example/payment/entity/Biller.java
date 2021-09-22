@@ -8,9 +8,10 @@ public class Biller {
 	
 	@Id
 	int biller_sequence_id;
+	
 	int biller_code;
 	int consumer_number;
-	int biller_acc_number;
+	int user_acc_number;
 	int auto_pay;   //(0/1)
 	int auto_pay_limit;
 	public int getBiller_sequence_id() {
@@ -31,11 +32,11 @@ public class Biller {
 	public void setConsumer_number(int consumer_number) {
 		this.consumer_number = consumer_number;
 	}
-	public int getBiller_acc_number() {
-		return biller_acc_number;
+	public int getUser_acc_number() {
+		return user_acc_number;
 	}
-	public void setBiller_acc_number(int biller_acc_number) {
-		this.biller_acc_number = biller_acc_number;
+	public void setUser_acc_number(int user_acc_number) {
+		this.user_acc_number = user_acc_number;
 	}
 	public int getAuto_pay() {
 		return auto_pay;

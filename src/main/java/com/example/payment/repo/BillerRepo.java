@@ -1,5 +1,9 @@
 package com.example.payment.repo;
 
-public interface BillerRepo {
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.payment.entity.Biller;
+
+public interface BillerRepo extends CrudRepository<Biller,Integer>{
 
 }
