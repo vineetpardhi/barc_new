@@ -40,10 +40,10 @@ public class Billerdao {
 	public List<Biller> getBillersById(int user_accno) {
 		List<Biller> biller = (List<Biller>) repo.findAll();
 		List<Biller> result = new ArrayList<Biller>();
-		System.out.println("Input User acc no is" + user_accno);
+		//System.out.println("Input User acc no is" + user_accno);
 		//logger.warn("Input User acc no is" + user_accno);
 		for(Biller b : biller) {
-			System.out.println("Given User acc no is"+b.getUser_acc_number());
+			//System.out.println("Given User acc no is"+b.getUser_acc_number());
 			//logger.info("Given User acc no is"+b.getUser_acc_number());
 			if(b.getUser_acc_number() == user_accno) {
 				result.add(b);
