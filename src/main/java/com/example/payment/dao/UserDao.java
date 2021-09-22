@@ -30,18 +30,18 @@ public class UserDao {
 		return users;
 	}
 	
-	public User getUserByLoginId(int id) {
+	public User getUserByLoginId(String id) {
 		User usr = repo.findById(id).get();
 		return usr;
 	}
 	
-	public String deleteUerById(int id) {
+	public String deleteUerById(String id) {
 		repo.deleteById(id);
 		return "User Deleted"; 
 	}
 	
-	public String updateUser(int id,User user) {
-		Optional<User> userOpt = repo.findById(id);  
+	public String updateUser(String id,User user) {
+		Optional<User> userOpt = repo.findById(id);
 		if(userOpt.isPresent()) {
 			user.setLogin_ID(id);
 			repo.save(user);

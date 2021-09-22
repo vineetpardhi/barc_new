@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class User {
 	
 	@Id
-	int login_ID;
+	String login_ID;
 	
 	String Name;
 	String Password;
@@ -18,10 +18,10 @@ public class User {
 	int LinkedAccount;
 	String SequenceID;
 	String RoleID;
-	public int getLogin_ID() {
+	public String getLogin_ID() {
 		return login_ID;
 	}
-	public void setLogin_ID(int login_ID) {
+	public void setLogin_ID(String login_ID) {
 		this.login_ID = login_ID;
 	}
 	public String getName() {

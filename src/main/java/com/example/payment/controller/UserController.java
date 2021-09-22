@@ -42,17 +42,17 @@ public class UserController {
 	}
 	
 	@GetMapping("user/{id}")
-	public User getUserById(@PathVariable int id) {
+	public User getUserById(@PathVariable String id) {
 		return userdao.getUserByLoginId(id);
 	}
 	
 	@DeleteMapping("user/{id}")
-	public String deleteById(@PathVariable int id) {
+	public String deleteById(@PathVariable String id) {
 		return userdao.deleteUerById(id);
 	}
 	
 	@PutMapping("user/{id}")
-	public String updateUser(@PathVariable int id,@RequestBody User user) {
+	public String updateUser(@PathVariable String id,@RequestBody User user) {
 		return userdao.updateUser(id, user);
 	}
 }
