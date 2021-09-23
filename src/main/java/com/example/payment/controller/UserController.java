@@ -24,10 +24,7 @@ public class UserController {
 	UserDao userdao;
 	
 	
-	@GetMapping("name")
-	public String getUserName(@RequestParam("name") String myname,@RequestParam("age") String myage) {
-		return "UserName is "+myname+" age is "+myage;
-	}
+	
 	
 	@PostMapping("user")
 	public String storeUser(@RequestBody User users) {
