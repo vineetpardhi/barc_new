@@ -59,14 +59,14 @@ public class Billdao {
 		return "Bill Deleted"; 
 	}
 	
-	/*public String updateBill(int id,Bill bill) {
-		Optional<Bill> bill = repo.findById(id);  
+	public String updateBill(int id,Bill newBill) {
+		Optional<Bill> bill  = repo.findById(id);  
 		if(bill.isPresent()) {
-			.setLogin_ID(id);
-			repo.save(user);
-			return "User updated"; 
+			newBill.setBill_sequence_id(id);
+			repo.save(newBill);
+			return "Bill updated"; 
 		}else {
-			return "User doesn't exist";
+			return "Bill doesn't exist";
 		}
-	}*/
+	}
 }

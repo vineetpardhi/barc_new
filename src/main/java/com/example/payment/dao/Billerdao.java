@@ -52,6 +52,26 @@ public class Billerdao {
 		return result;
 	}
 	
+	public int getBillerByConsumerNumber(int consumer_no) {
+		List<Biller> biller = (List<Biller>) repo.findAll();
+		Biller result = null;
+		//System.out.println("Input User acc no is" + user_accno);
+		//logger.warn("Input User acc no is" + user_accno);
+		try {
+		for(Biller b : biller) {
+			//System.out.println("Given User acc no is"+b.getUser_acc_number());
+			//logger.info("Given User acc no is"+b.getUser_acc_number());
+			if(b.getConsumer_number() == consumer_no) {
+				result = b;
+				break;
+			}
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result.getUser_acc_number();
+	}
+	
 	public String deleteBillerById(int user_accno, int billercode) {
 		List<Biller> biller = (List<Biller>) repo.findAll();
 		for(Biller b : biller) {
