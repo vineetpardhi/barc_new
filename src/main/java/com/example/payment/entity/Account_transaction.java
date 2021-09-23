@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-public class Account_transaction {
+public class gAccount_transaction {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
